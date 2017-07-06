@@ -39,6 +39,8 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+app.use('/static', express.static(path.join(__dirname, 'public')))
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
